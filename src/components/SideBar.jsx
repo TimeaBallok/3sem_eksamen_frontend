@@ -10,26 +10,32 @@ function SideBar(props) {
             <nav>
                 <br/>
                 <div>
-                    <NavLink to= {props.loggedIn ? "/side1": "/login"}>Side 1</NavLink>
+                    <NavLink to= {props.loggedIn ? "/side1": "/login"}>US-1</NavLink>
                 </div>
                 <br/>
                 <div>
-                    <NavLink to={props.loggedIn ? "/side2" : "/login"} >Side 2</NavLink>
+                    <NavLink to={props.loggedIn ? "/side2" : "/login"} >US-2</NavLink>
                 </div>
                 <br/>
+                <div>
+                    <NavLink to={props.loggedIn ? "/side3" : "/login"} >US-3</NavLink>
+                </div>
             </nav>  : <div style={{height: 50}}></div>}
 
             {facade.hasUserAccess('admin', props.loggedIn) ?
                 <nav>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side3" : "/login"} >Side 3</NavLink>
+                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >US-4</NavLink>
                     </div>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >Side 4</NavLink>
+                        <NavLink to={props.loggedIn ? "/side5" : "/login"} >US-5</NavLink>
                     </div>
                     <br/>
+                    <div>
+                        <NavLink to={props.loggedIn ? "/side6" : "/login"} >US-6</NavLink>
+                    </div>
                 </nav>  : <div style={{height: 300}}></div>}
             <div style={{height: 200}}>
 

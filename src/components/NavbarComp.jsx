@@ -1,5 +1,5 @@
 import {Link, NavLink} from "react-router-dom";
-import logo from "/src/images/TBlogo.png";
+import logo from "/src/images/logo5.png";
 import facade from "../apiFacade.js";
 
 function NavbarComp({loggedIn, setLoggedIn, setErrorMessage}) {

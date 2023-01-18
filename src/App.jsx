@@ -14,6 +14,8 @@ import Side3 from "./components/Side3.jsx";
 import SignUp from "./components/SignUp.jsx";
 import Side2 from "./components/Side2.jsx";
 import Side4 from "./components/Side4.jsx";
+import Side5 from "./components/Side5.jsx";
+import Side6 from "./components/Side6.jsx";
 
 function App() {
     //useStates her
@@ -33,10 +35,14 @@ function App() {
                         <Side1 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
                     <Route path="side2" element={facade.hasUserAccess('user', loggedIn) ?
                         <Side2 setErrorMessage={setErrorMessage}/> : <AccessDenied/> }/>
-                    <Route path="side3" element={facade.hasUserAccess('admin', loggedIn) ?
-                        <Side3 /> : <AccessDenied/>}/>
+                    <Route path="side3" element={facade.hasUserAccess('user', loggedIn) ?
+                        <Side3 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
                     <Route path="side4" element={facade.hasUserAccess('admin', loggedIn) ?
-                        <Side4 /> : <AccessDenied/>}/>
+                        <Side4 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
+                    <Route path="side5" element={facade.hasUserAccess('admin', loggedIn) ?
+                        <Side5 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
+                    <Route path="side6" element={facade.hasUserAccess('admin', loggedIn) ?
+                        <Side6 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
                     <Route path="/signUp" element={<SignUp/>}/>
                     <Route path="login" element={<LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn}
                                                         setErrorMessage={setErrorMessage}/>}/>

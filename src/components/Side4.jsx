@@ -4,7 +4,7 @@ function Side4(props) {
 
     return (
         <div className="column middle">
-            <h2>Side 3</h2>
+            <h2>Side 4</h2>
         </div>
     );
 }
