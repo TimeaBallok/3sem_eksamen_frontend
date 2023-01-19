@@ -106,6 +106,23 @@ function apiFacade() {
             })
     }
 
+    const putData = (endpoint, updateAction, SetErrorMessage, jsonBody) =>
+    {
+        const options = makeOptions("PUT", true, jsonBody); //True adds the token
+        return fetch(URL + "/api/" + endpoint, options)
+            .then(handleHttpErrors)
+            .then((data) => updateAction(data))
+            .catch(err =>
+            {
+                if (err.status)
+                {
+                    console.log(err)
+                    err.fullError.then(e => SetErrorMessage(e.code + ": " + e.message))
+                }
+                else { SetErrorMessage("Network error"); }
+            })
+    }
+
     const fetchJoke = () => {const options = makeOptions("GET",true); //True add's the token
         return fetch(URL + "/api/joke/haha", options).then(handleHttpErrors);
     }
@@ -168,6 +185,7 @@ function apiFacade() {
         fetchData,
         postData,
         deleteData,
+        putData,
         hasUserAccess,
         getUserRoles,
         getUserName

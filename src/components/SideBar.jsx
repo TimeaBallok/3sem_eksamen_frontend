@@ -26,19 +26,19 @@ function SideBar(props) {
                 <nav>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >US-4</NavLink>
+                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >US-4 Create a new event</NavLink>
                     </div>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side5" : "/login"} >US-5</NavLink>
+                        <NavLink to={props.loggedIn ? "/side5" : "/login"} >US-5 Remove members</NavLink>
                     </div>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side6" : "/login"} >US-6</NavLink>
+                        <NavLink to={props.loggedIn ? "/side6" : "/login"} >US-6 Update event</NavLink>
                     </div>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side7" : "/login"} >US-7</NavLink>
+                        <NavLink to={props.loggedIn ? "/side7" : "/login"} >US-7 Delete event</NavLink>
                     </div>
                 </nav>  : <div style={{height: 300}}></div>}
             <div style={{height: 200}}>
