@@ -36,6 +36,10 @@ function SideBar(props) {
                     <div>
                         <NavLink to={props.loggedIn ? "/side6" : "/login"} >US-6</NavLink>
                     </div>
+                    <br/>
+                    <div>
+                        <NavLink to={props.loggedIn ? "/side7" : "/login"} >US-7</NavLink>
+                    </div>
                 </nav>  : <div style={{height: 300}}></div>}
             <div style={{height: 200}}>
 

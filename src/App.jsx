@@ -16,6 +16,7 @@ import Side2 from "./components/Side2.jsx";
 import Side4 from "./components/Side4.jsx";
 import Side5 from "./components/Side5.jsx";
 import Side6 from "./components/Side6.jsx";
+import Side7 from "./components/Side7.jsx";
 
 function App() {
     //useStates her
@@ -43,6 +44,8 @@ function App() {
                         <Side5 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
                     <Route path="side6" element={facade.hasUserAccess('admin', loggedIn) ?
                         <Side6 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
+                    <Route path="side7" element={facade.hasUserAccess('admin', loggedIn) ?
+                        <Side7 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
                     <Route path="/signUp" element={<SignUp/>}/>
                     <Route path="login" element={<LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn}
                                                         setErrorMessage={setErrorMessage}/>}/>
