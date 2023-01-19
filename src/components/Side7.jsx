@@ -13,7 +13,7 @@ function Side7({setErrorMessage}) {
     const deleteDinner = async(e) => {
         await facade.deleteData("dinner/delete/" + e.target.value, data => {
             console.log("Boat with id: " + e.target.value + " was successfully deleted");
-        }, "Failed to delete boat")
+        }, setErrorMessage)
         setToggle(!toggle)
     }
 
