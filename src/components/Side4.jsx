@@ -42,8 +42,8 @@ function Side4({setErrorMessage}) {
     }
 
     return (
-        <div className="column middle" style={{paddingLeft: 40}}>
-            <div>
+        <div style={{padding: 30}} className="column middle" style={{paddingLeft: 40}}>
+            <div style={{paddingTop: 30}}>
                 <h2>Create new dinner event</h2>
             </div>
             <form onSubmit={handleSubmit}>

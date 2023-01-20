@@ -37,7 +37,7 @@ function Side5({setErrorMessage}) {
 
 
     return (
-        <div className='column middle'>
+        <div style={{padding: 30}} className='column middle'>
             <label htmlFor="boatSelect">Choose a dinner:</label>
             <select onChange={dinnerChange}>
                 <option value=""></option>

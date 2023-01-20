@@ -10,8 +10,8 @@ function Side1({setErrorMessage}) {
     }, [])
 
     return (
-        <div className='column middle'>
-            <h2>Dinner event list</h2>
+        <div style={{padding: 30}} className='column middle'>
+            <h2>Dinner events list</h2>
 
             <br/>
 

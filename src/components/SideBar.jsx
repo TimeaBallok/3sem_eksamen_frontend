@@ -5,20 +5,20 @@ import facade from "../apiFacade.js";
 
 function SideBar(props) {
     return (
-        <div className="column side">
+        <div style={{paddingTop: 50}} className="column side">
             {facade.hasUserAccess('user', props.loggedIn) ?
             <nav>
                 <br/>
                 <div>
-                    <NavLink to= {props.loggedIn ? "/side1": "/login"}>US-1</NavLink>
+                    <NavLink to= {props.loggedIn ? "/side1": "/login"}>US-1 All dinner events</NavLink>
                 </div>
                 <br/>
                 <div>
-                    <NavLink to={props.loggedIn ? "/side2" : "/login"} >US-2</NavLink>
+                    <NavLink to={props.loggedIn ? "/side2" : "/login"} >US-2 My events and account</NavLink>
                 </div>
                 <br/>
                 <div>
-                    <NavLink to={props.loggedIn ? "/side3" : "/login"} >US-3</NavLink>
+                    <NavLink to={props.loggedIn ? "/side3" : "/login"} >US-3 Assign to event</NavLink>
                 </div>
             </nav>  : <div style={{height: 50}}></div>}
 
@@ -41,7 +41,7 @@ function SideBar(props) {
                         <NavLink to={props.loggedIn ? "/side7" : "/login"} >US-7 Delete event</NavLink>
                     </div>
                 </nav>  : <div style={{height: 300}}></div>}
-            <div style={{height: 200}}>
+            <div style={{height: 100}}>
 
             </div>
 

@@ -54,7 +54,7 @@ function App() {
             </div>
             <Footer/>
 
-            {/*<Alert className="mt-4" >Status: {errorMessage}</Alert>*/}
+            <Alert className="mt-4" >Status: {errorMessage}</Alert>
         </BrowserRouter>
     );
 }

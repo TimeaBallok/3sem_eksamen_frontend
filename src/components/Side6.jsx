@@ -63,10 +63,11 @@ function Side6({setErrorMessage}) {
     }
 
     return (
-        <div className="column middle" style={{paddingLeft: 40}}>
-            <div>
+        <div style={{paddingTop: 30}} className="column middle" style={{paddingLeft: 40}}>
+            <div style={{paddingTop: 30}} >
                 <h2>Update dinner event</h2>
             </div>
+            <br/>
 
             <label htmlFor="dinnerSelect">Choose a dinner event:</label>
             <select onChange={dinnerChange}>
